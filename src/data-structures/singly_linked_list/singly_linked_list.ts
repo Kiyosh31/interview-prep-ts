@@ -2,9 +2,9 @@ class Node<T> {
   data: T;
   next: Node<T> | null;
 
-  constructor(data: T) {
+  constructor(data: T, next: Node<T> | null = null) {
     this.data = data;
-    this.next = null;
+    this.next = next;
   }
 }
 
@@ -44,7 +44,7 @@ export class SinglyLinkedList<T> {
   insertAtTail(data: T) {
     const newNode = new Node(data);
 
-    if (this.head === null) {
+    if (this.isEmpty()) {
       this.head = newNode;
     } else {
       let current = this.head;
