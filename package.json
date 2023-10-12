@@ -7,8 +7,7 @@
   "scripts": {
     "1": "npm run build && node build/find_sum/find_sum.js",
     "init-ts": "npm i -D typescript && tsc --init",
-    "compile": "tsc",
-    "build": "tsc -p tsconfig.build.json",
+    "build": "tsc",
     "test": "jest"
   },
   "author": "David Garcia",

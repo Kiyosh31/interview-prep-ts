@@ -29,6 +29,3 @@ export const findSum = (arr: number[], value: number): number[] => {
 
   return [];
 };
-
-const res: number[] = findSum([1, 21, 3, 14, 5, 60, 7, 6], 81);
-console.log(res);

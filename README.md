@@ -1,3 +1,7 @@
+# Overview
+
+Study Material about `data structures` and algorithms for interviews made in `TypeScript`
+
 # Installation
 
 ```console
@@ -11,5 +15,5 @@ npm i
 npm run 1
 
 # Run tests (recommended)
-
+npm test
 ```
