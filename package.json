@@ -1,0 +1,20 @@
+{
+  "name": "interview-prep",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "init-ts": "npm i -D typescript && tsc --init",
+    "build": "tsc",
+    "1": "npm run build && node build/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "@types/node": "^20.8.4"
+  },
+  "dependencies": {
+  }
+}
