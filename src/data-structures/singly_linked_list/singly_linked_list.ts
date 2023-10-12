@@ -57,4 +57,66 @@ export class SinglyLinkedList<T> {
       }
     }
   }
+
+  search(data: T): boolean {
+    if (this.isEmpty()) {
+      return false;
+    }
+
+    let current = this.head;
+    while (current != null) {
+      if (current.data === data) {
+        return true;
+      }
+      current = current.next;
+    }
+
+    return false;
+  }
+
+  deleteAtHead() {
+    if (!this.isEmpty()) {
+      this.head = this.head?.next || null;
+    }
+  }
+
+  deleteAtTail() {
+    if (!this.isEmpty()) {
+      let current = this.head;
+      while (current != null) {
+        if (current.next?.next === null) {
+          current.next = null;
+          return;
+        }
+        current = current.next;
+      }
+    }
+  }
+
+  deleteByValue(data: T) {
+    if (!this.isEmpty()) {
+      let current = this.head;
+      while (current != null) {
+        if (current.next?.data === data) {
+          current.next = current.next.next;
+        }
+        current = current.next;
+      }
+    }
+  }
+
+  size(): number {
+    if (this.isEmpty()) {
+      return -1;
+    }
+
+    let size = 0;
+    let current = this.head;
+    while (current != null) {
+      size++;
+      current = current.next;
+    }
+
+    return size;
+  }
 }
