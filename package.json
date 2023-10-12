@@ -5,16 +5,19 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "1": "npm run build && node build/find_sum/find_sum.js",
     "init-ts": "npm i -D typescript && tsc --init",
-    "build": "tsc",
-    "1": "npm run build && node build/index.js"
+    "compile": "tsc",
+    "build": "tsc -p tsconfig.build.json",
+    "test": "jest"
   },
-  "author": "",
+  "author": "David Garcia",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "^5.2.2",
-    "@types/node": "^20.8.4"
-  },
-  "dependencies": {
+    "@types/jest": "^29.5.5",
+    "@types/node": "^20.8.4",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.2"
   }
 }
