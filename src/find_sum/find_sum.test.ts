@@ -1,6 +1,6 @@
 import { findSum } from "./find_sum";
 
-it("findSum", () => {
+test("findSum", () => {
   const input = [1, 21, 3, 14, 5, 60, 7, 6];
   const value = 81;
 
