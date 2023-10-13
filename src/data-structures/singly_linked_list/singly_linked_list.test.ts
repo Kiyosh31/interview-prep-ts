@@ -1,8 +1,13 @@
 import { SinglyLinkedList } from "./singly_linked_list";
 
+let list: SinglyLinkedList<number>;
+
+beforeEach(() => {
+  list = new SinglyLinkedList();
+});
+
 describe("SinglyLinkedList", () => {
   it("Should Add elements at the beginning of the list", () => {
-    const list = new SinglyLinkedList();
     list.insertAtHead(0);
     list.insertAtHead(1);
 
@@ -11,7 +16,6 @@ describe("SinglyLinkedList", () => {
   });
 
   it("Should add element at the end of the list", () => {
-    const list = new SinglyLinkedList();
     list.insertAtTail(0);
     list.insertAtTail(2);
 
@@ -19,13 +23,10 @@ describe("SinglyLinkedList", () => {
   });
 
   it("Should print empty list", () => {
-    const list = new SinglyLinkedList();
-
     expect(list.printList()).toStrictEqual([]);
   });
 
   it("Should print full list", () => {
-    const list = new SinglyLinkedList();
     list.insertAtTail(0);
     list.insertAtTail(1);
     list.insertAtTail(2);
@@ -36,7 +37,6 @@ describe("SinglyLinkedList", () => {
   });
 
   it("should find the element in list", () => {
-    const list = new SinglyLinkedList();
     list.insertAtTail(0);
     list.insertAtTail(1);
     list.insertAtTail(2);
@@ -47,12 +47,10 @@ describe("SinglyLinkedList", () => {
   });
 
   it("should not find the element in list", () => {
-    const list = new SinglyLinkedList();
     expect(list.search(2)).toStrictEqual(false);
   });
 
   it("should delete the first element on the list", () => {
-    const list = new SinglyLinkedList();
     list.insertAtTail(0);
     list.insertAtTail(1);
     list.insertAtTail(2);
@@ -64,7 +62,6 @@ describe("SinglyLinkedList", () => {
   });
 
   it("should delete the last element on the list", () => {
-    const list = new SinglyLinkedList();
     list.insertAtTail(0);
     list.insertAtTail(1);
     list.insertAtTail(2);
@@ -76,7 +73,6 @@ describe("SinglyLinkedList", () => {
   });
 
   it("should delete the first element on the list", () => {
-    const list = new SinglyLinkedList();
     list.insertAtTail(0);
     list.insertAtTail(1);
     list.insertAtTail(2);
@@ -88,7 +84,6 @@ describe("SinglyLinkedList", () => {
   });
 
   it("should Should retrieve the length of the list (5)", () => {
-    const list = new SinglyLinkedList();
     list.insertAtTail(0);
     list.insertAtTail(1);
     list.insertAtTail(2);
@@ -99,7 +94,6 @@ describe("SinglyLinkedList", () => {
   });
 
   it("should Should retrieve -1 the list is empty", () => {
-    const list = new SinglyLinkedList();
     expect(list.size()).toStrictEqual(-1);
   });
 });

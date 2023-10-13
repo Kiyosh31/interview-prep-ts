@@ -1,9 +1,14 @@
 import { SinglyLinkedList } from "../../data-structures/singly_linked_list/singly_linked_list";
 import { removeDuplicates } from "./remove_duplicate_list";
 
+let list: SinglyLinkedList<number>;
+
+beforeEach(() => {
+  list = new SinglyLinkedList<number>();
+});
+
 describe("removeDuplicates", () => {
   it("should remove dulicates", () => {
-    const list = new SinglyLinkedList<number>();
     list.insertAtTail(1);
     list.insertAtTail(2);
     list.insertAtTail(2);
@@ -19,7 +24,6 @@ describe("removeDuplicates", () => {
   });
 
   it("should return null", () => {
-    const list = new SinglyLinkedList<number>();
     expect(list.printList()).toStrictEqual([]);
   });
 });
