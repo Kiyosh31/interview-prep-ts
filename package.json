@@ -8,7 +8,7 @@
     "1": "npm run build && node build/find_sum/find_sum.js",
     "init-ts": "npm i -D typescript && tsc --init",
     "build": "tsc",
-    "test": "jest"
+    "test": "jest --watchAll"
   },
   "author": "David Garcia",
   "license": "ISC",
