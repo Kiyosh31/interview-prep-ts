@@ -33,6 +33,8 @@ describe("Union", () => {
 
     list2.insertAtTail(0);
     list2.insertAtTail(41);
+    list2.insertAtTail(12);
+    list2.insertAtTail(2);
 
     const result = union(list1, list2);
     expect(result.printList()).toStrictEqual([12, 2, 43, 0, 41]);
@@ -54,5 +56,19 @@ describe("Intersection", () => {
 
     const result = intersection(list1, list2);
     expect(result.printList()).toStrictEqual([20, 60]);
+  });
+
+  it("12 -> 2", () => {
+    list1.insertAtTail(12);
+    list1.insertAtTail(2);
+    list1.insertAtTail(43);
+
+    list2.insertAtTail(0);
+    list2.insertAtTail(41);
+    list2.insertAtTail(12);
+    list2.insertAtTail(2);
+
+    const result = intersection(list1, list2);
+    expect(result.printList()).toStrictEqual([12, 2]);
   });
 });

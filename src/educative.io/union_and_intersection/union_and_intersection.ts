@@ -33,6 +33,7 @@ export const union = (
   list1: SinglyLinkedList<number>,
   list2: SinglyLinkedList<number>
 ): SinglyLinkedList<number> => {
+  if (list1.isEmpty()) return list2;
   if (list2.isEmpty()) return list1;
 
   let current = list2.head;
@@ -55,7 +56,7 @@ export const intersection = (
 
   let current = list2.head;
   while (current != null) {
-    if (list1.search(current.data)) {
+    if (list1.search(current.data) && !result.search(current.data)) {
       result.insertAtTail(current.data);
     }
     current = current.next;
