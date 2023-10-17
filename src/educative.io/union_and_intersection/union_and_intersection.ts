@@ -27,7 +27,7 @@
  * intersection = 20->60
  */
 
-import { SinglyLinkedList } from "../../data-structures/singly_linked_list/singly_linked_list";
+import { SinglyLinkedList } from "../../data-structures/List/singly_linked_list/singly_linked_list";
 
 export const union = (
   list1: SinglyLinkedList<number>,

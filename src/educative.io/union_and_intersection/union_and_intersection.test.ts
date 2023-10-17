@@ -1,4 +1,4 @@
-import { SinglyLinkedList } from "../../data-structures/singly_linked_list/singly_linked_list";
+import { SinglyLinkedList } from "../../data-structures/List/singly_linked_list/singly_linked_list";
 import { union, intersection } from "./union_and_intersection";
 
 let list1: SinglyLinkedList<number>;

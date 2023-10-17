@@ -1,4 +1,4 @@
-import { SinglyLinkedList } from "../../data-structures/singly_linked_list/singly_linked_list";
+import { SinglyLinkedList } from "../../data-structures/List/singly_linked_list/singly_linked_list";
 
 /**
  * Remove Duplicates from LinkedList

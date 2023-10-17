@@ -16,7 +16,7 @@
  * 47
  */
 
-import { SinglyLinkedList } from "../../data-structures/singly_linked_list/singly_linked_list";
+import { SinglyLinkedList } from "../../data-structures/List/singly_linked_list/singly_linked_list";
 
 // get the length of the list
 // subtract the value 5 - 3 = 2
