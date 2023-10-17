@@ -14,11 +14,12 @@ export const topKFrequent = (nums: number[], k: number): number[] => {
     }
   }
 
-  for (let [key, value] of map) {
-    if (value >= k) {
-      res.push(key);
-    }
-  }
+  [...map.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, k)
+    .forEach((v) => {
+      res.push(v[0]);
+    });
 
   return res;
 };
