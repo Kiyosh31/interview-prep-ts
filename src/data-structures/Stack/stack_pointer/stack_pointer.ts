@@ -36,10 +36,10 @@ export class StackPointer<T> {
     }
   }
 
-  peek(): T | null {
-    if (this.isEmpty()) return null;
+  peek(): T | void {
+    if (this.isEmpty()) return;
 
-    return this.top?.data || null;
+    return this.top?.data;
   }
 
   printStack(): T[] {

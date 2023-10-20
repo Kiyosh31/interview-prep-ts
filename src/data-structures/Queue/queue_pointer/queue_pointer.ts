@@ -46,16 +46,16 @@ export class QueuePointer<T> {
     }
   }
 
-  getFront(): T | null {
-    if (this.isEmpty()) return null;
+  getFront(): T | void {
+    if (this.isEmpty()) return;
 
-    return this.front?.data || null;
+    return this.front?.data;
   }
 
-  getBack(): T | null {
-    if (this.isEmpty()) return null;
+  getBack(): T | void {
+    if (this.isEmpty()) return;
 
-    return this.back?.data || null;
+    return this.back?.data;
   }
 
   print(): T[] {

@@ -13,8 +13,8 @@ export class StackArray<T> {
     return this.items.length;
   }
 
-  getTop(): T | null {
-    if (this.isEmpty()) return null;
+  getTop(): T | void {
+    if (this.isEmpty()) return;
 
     return this.items[this.size() - 1];
   }

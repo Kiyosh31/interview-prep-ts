@@ -49,7 +49,7 @@ describe("QueuePointer", () => {
   });
 
   it("getFront empty", () => {
-    expect(queue.getFront()).toStrictEqual(null);
+    expect(queue.getFront()).toStrictEqual(undefined);
   });
 
   it("getBack", () => {
@@ -64,6 +64,6 @@ describe("QueuePointer", () => {
   });
 
   it("getBack empty", () => {
-    expect(queue.getBack()).toStrictEqual(null);
+    expect(queue.getBack()).toStrictEqual(undefined);
   });
 });
