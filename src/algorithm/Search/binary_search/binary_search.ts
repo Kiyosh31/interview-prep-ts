@@ -2,6 +2,8 @@ export const iterativeBinarySearch = (
   arr: number[],
   target: number
 ): boolean => {
+  arr.sort((a, b) => a - b);
+
   let left = 0;
   let right = arr.length - 1;
 
@@ -10,7 +12,7 @@ export const iterativeBinarySearch = (
 
     if (arr[mid] === target) {
       return true;
-    } else if (arr[mid] < mid) {
+    } else if (arr[mid] > mid) {
       left = mid + 1;
     } else {
       right = mid - 1;
@@ -27,6 +29,7 @@ export const recursiveBinarySearch = (
   end: number
 ): boolean => {
   if (start >= end) return false;
+  arr.sort((a, b) => a - b);
 
   let mid = Math.floor((start + end) / 2);
 
